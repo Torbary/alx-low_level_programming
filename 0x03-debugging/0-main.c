@@ -7,12 +7,13 @@
 
 int main(void)
 {
-        int i;
+	int i;
 
-        i = 0;
-        positive_or_negative(i);
+	i = 0;
 
-	printf("0 is positive\n", i);
+	positive_or_nagative(i);
 
-        return (0);
+	printf("0 is positive\n");
+
+	return (0);
 }
