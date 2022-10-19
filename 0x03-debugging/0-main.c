@@ -13,7 +13,5 @@ int main(void)
 
 	positive_or_nagative(i);
 
-	printf("0 is positive\n");
-
 	return (0);
 }
