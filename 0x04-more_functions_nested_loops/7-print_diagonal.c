@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-  * print_diagonal -printing daigonal lines
+  * print_diagonal -printing diagonal lines
   * @n: argument passed
   *
+  * Return: void
   */
 
 void print_diagonal(int n)
@@ -21,5 +22,4 @@ void print_diagonal(int n)
 		_putchar('\\');
 		_putchar('\n');
 	}
-	
 }
