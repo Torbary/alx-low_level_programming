@@ -2,7 +2,7 @@
 
 /**
 *print_numbers - print 0123456789
-* owned by me
+* print 0-9
 *Return: void
 */
 
