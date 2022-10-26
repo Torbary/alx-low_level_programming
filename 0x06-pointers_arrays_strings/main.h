@@ -11,5 +11,5 @@ char *string_toupper(char *);
 char *cap_string(char *);
 #include <stdio.h>
 char *rot13(char *);
-
+void print_number(int n);
 #endif
