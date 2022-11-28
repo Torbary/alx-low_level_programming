@@ -7,22 +7,18 @@
   * @n: int add the list
   * Return: NULL if it failed
   */
+
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *tmp;
+	listint_t *ptr;
 
 	if (head == NULL)
-	{
 		return (NULL);
-	}
-
-	tmp = malloc(sizeof(lisint_t));
-	if (tmp == NULL)
-	{
+	ptr = malloc(sizeof(listint_t));
+	if (ptr == NULL)
 		return (NULL);
-	}
-	tmp->n = n;
-	tmp->next = *head;
-	*head = tmp;
-	return (tmp);
+	ptr->n = n;
+	ptr->next = *head;
+	*head = ptr;
+	return (ptr);
 }
