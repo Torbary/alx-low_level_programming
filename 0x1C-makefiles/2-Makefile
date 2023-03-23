@@ -1,0 +1,28 @@
+# Makefile for building the "school" executable
+
+# Define the compiler to use
+CC = gcc
+
+#Define the source files
+SRC = main.c school.c
+
+#Define the object files(derived from the source file)
+OBJ =$(SRC:.c=.o)
+
+#Define the name of the executable
+NAME = school
+
+#Define the all rule
+all: $(NAME)
+
+#Define the rule for building object files from source files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+#Tell make that the object files depend on the source file
+# and the Makefile (for the compiler anf flags)
+$(OBJ): $(SRC) Makefile
+
+#Tell make to clean up the generated files
+clean:
+	rm -f $(OBJ) $(NAME)
