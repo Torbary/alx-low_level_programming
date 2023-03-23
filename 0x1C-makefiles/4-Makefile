@@ -1,0 +1,33 @@
+#COmpiler to be used
+CC = gcc
+
+# Flags for the compiler
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#files
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+#programs to delte files
+RM = rm -f
+
+#Targerts
+.PHONY: all clean fclean oclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+clean:
+	$(RM) *~ $(OBJ)
+
+oclean:
+	$(RM) $(OBJ)
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
