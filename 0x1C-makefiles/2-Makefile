@@ -12,21 +12,7 @@ OBJ =$(SRC:.c=.o)
 #Define the name of the executable
 NAME = school
 
-#Define the all rule
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) - o $(NAME)
-
-#Define the rule for building object files from source files
-%.o: %.c
-	$(CC) -c $< -o $@
-
-#Tell make that the object files depend on the source file
-# and the Makefile (for the compiler anf flags)
-#$(OBJ): $(SRC) Makefile
-
-#Tell make to clean up the generated files
-.PHONY: clean
-clean:
-	rm -f $(OBJ) $(NAME)
+#Define the all rule that depend on the obj file and update the obj files
+#without listing them
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
