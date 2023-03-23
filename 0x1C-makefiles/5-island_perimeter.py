@@ -15,10 +15,6 @@ def island_perimeter(grid):
     Raises:
         ValueError: if the grid is empty
     """
-
-    if not grid:
-        raise ValueError("Grid must not be empty.")
-
     perimeter = 0
     height = len(grid)
     width = len(grid[0])
